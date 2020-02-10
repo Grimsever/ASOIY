@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="funScript.js"></script>
+</head>
+<body>
+    <form name="form_triangle_sq">
+        <p>Первая сторона</p>
+        <input type="text" size="5" name="first_side">
+        <p>Вторая сторона</p>
+        <input type="text" size="5" name="sec_side">
+        <p>Третья сторона</p>
+        <input type="text" size="5" name="third_side">
+        <input type="button" value="Вычислить площадь" 
+        onfocus="getTr(document.form_triangle_sq.first_side.value, document.form_triangle_sq.sec_side.value, document.form_triangle_sq.third_side.value)">
+    </form>
+        
+</body>
+</html>
