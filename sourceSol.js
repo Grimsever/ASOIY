@@ -23,11 +23,11 @@ function getFullName()
     {
         console.log(getFullNames);
         fullName=getFullNames;
-        getConfirm=confirm(name+" "+secName+" "+fullName+" Всё верно?");
+        getConfirm=confirm(`${secName} ${name} ${fullName} \nВсё верно?`);
     }
     if(getConfirm)
     {
-        alert("Всё ок!");
+        alert(`Привет ${secName} ${name} ${fullName}`);
     }
     else
     {
