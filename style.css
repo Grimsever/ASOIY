@@ -1,0 +1,23 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    padding: 20px;
+    background-color: rgb(230, 230, 230);
+}
+
+.menu{
+    display: flex;
+    flex-direction:row-reverse;
+}
+.item_menu{
+    list-style: none;
+    margin: auto 10px auto 10px;
+}
+a{
+    color: black;
+}
+h1{
+    margin: auto 10px auto 10px;
+}
