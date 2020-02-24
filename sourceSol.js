@@ -1,11 +1,20 @@
-var name;
-var secName;
-var fullName;
-var getName=prompt("Введите имя");
-var getSecName=prompt("Введите Фамилию");
-var getFullNames=prompt("Введите Отчество");
-var getConfirm;
-getFullName();
+// var name;
+// var secName;
+// var fullName;
+// // var getName=prompt("Введите имя");
+// // var getSecName=prompt("Введите Фамилию");
+// // var getFullNames=prompt("Введите Отчество");
+// var getConfirm;
+// getFullName();
+getSquare();
+
+function getSquare()
+{
+    var radius=prompt("Введите радиус");
+    alert(radius*radius*Math.PI);
+}
+
+
 
 function getFullName()
 {
