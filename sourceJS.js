@@ -16,9 +16,10 @@ function solution_2()
 {
     var pp=document.getElementById('sol2');
     var str="";
-    for(var j=0;j<8;j++)
+    var num=prompt("Введите размер доски");
+    for(var j=0;j<num;j++)
     {   
-        for(var i=0;i<8;i++)
+        for(var i=0;i<num;i++)
         {
             if(j%2==0)
             {
