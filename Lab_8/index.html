@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="script.js"></script>
+    <title>Lab8</title>
+</head>
+
+<body>
+    <form name="form1">
+        <table>
+            <tr>
+                <td>Фамилия:</td>
+                <td>Дата заключения контракта:</td>
+            </tr>
+            <!--1-->
+            <tr>
+                <td><input id="surname1" type="text" /></td>
+                <td><input id="date1" type="date" /></td>
+                <td><button onclick="getnumber(1)">Рассчитать</button></td>
+            </tr>
+            <!--2-->
+            <tr>
+                <td><input id="surname2" type="text" /></td>
+                <td><input id="date2" type="date" /></td>
+                <td><button onclick="getnumber(2)">Рассчитать</button></td>
+            </tr>
+            <!--3-->
+            <tr>
+                <td><input id="surname3" type="text" /></td>
+                <td><input id="date3" type="date" /></td>
+                <td><button onclick="getnumber(3)">Рассчитать</button></td>
+            </tr>
+            <!--4-->
+            <tr>
+                <td><input id="surname4" type="text" /></td>
+                <td><input id="date4" type="date" /></td>
+                <td><button onclick="getnumber(4)">Рассчитать</button></td>
+            </tr>
+            <!--5-->
+            <tr>
+                <td><input id="surname5" type="text" /></td>
+                <td><input id="date5" type="date" /></td>
+                <td><button onclick="getnumber(5)">Рассчитать</button></td>
+            </tr>
+            <!--6-->
+            <tr>
+                <td><input id="surname6" type="text" /></td>
+                <td><input id="date6" type="date" /></td>
+                <td><button onclick="getnumber(6)">Рассчитать</button></td>
+            </tr>
+            <!--7-->
+            <tr>
+                <td><input id="surname7" type="text" /></td>
+                <td><input id="date7" type="date" /></td>
+                <td><button onclick="getnumber(7)">Рассчитать</button></td>
+            </tr>
+        </table>
+        <br>
+        <hr>
+        <!--Month-->
+        <p>Выберите месяц: <input id="month" type="number" /></p>
+        <button onclick="getmonth()">Отпуска в заданном месяце</button>
+        <button onclick="getyear()">Отпуска в следующим году</button>
+    </form>
+</body>
+
+</html>
