@@ -1,43 +1,72 @@
 function test() {
     const elements = document.form.elements;
     var cost = 0;
+    var countAll = 0;
     if (document.getElementById("tovar1").checked) {
-        let subCost =
-            Number(document.getElementById("info").value) +
-            Number(elements.infoHours.value) +
-            Number(elements.infoLanguage.value) +
-            Number(elements.infoTest.value);
-        cost = cost + subCost;
-        document.getElementById("infoCost").value = subCost;
+        let count = Number(elements.count1.value);
+        countAll = countAll + count;
+        let subCost = count * 2;
+        if (elements.package.checked) {
+            subCost += 1;
+        }
+        cost += subCost;
+        document.getElementById("tovar1Cost").value = subCost;
     }
 
-    if (document.getElementById("DB").checked) {
-        let subCost =
-            Number(document.getElementById("DB").value) +
-            Number(elements.DBHours.value) +
-            Number(elements.DBLanguage.value) +
-            Number(elements.DBTest.value);
-        cost = cost + subCost;
-        document.getElementById("DBCost").value = subCost;
+    if (document.getElementById("tovar2").checked) {
+        let count = Number(elements.count2.value);
+        countAll = countAll + count;
+        let subCost = count * 2;
+
+        if (elements.package2.checked) {
+            subCost += 1;
+        }
+        document.getElementById("tovar2Cost").value = subCost;
     }
 
-    if (document.getElementById("net").checked) {
-        let subCost =
-            Number(document.getElementById("net").value) +
-            Number(elements.netHours.value) +
-            Number(elements.netLanguage.value) +
-            Number(elements.netTest.value);
-        cost = cost + subCost;
-        document.getElementById("netCost").value = subCost;
+    if (document.getElementById("tovar3").checked) {
+        let count = Number(elements.count3.value);
+        countAll = countAll + count;
+        let subCost = count * 3;
+
+        if (elements.package3.checked) {
+            subCost += 1;
+        }
+        cost += subCost;
+        document.getElementById("tovar3Cost").value = subCost;
     }
-    if (document.getElementById("logic").checked) {
-        let subCost =
-            Number(document.getElementById("logic").value) +
-            Number(elements.logicHours.value) +
-            Number(elements.logicLanguage.value) +
-            Number(elements.logicTest.value);
-        cost = cost + subCost;
-        document.getElementById("logicCost").value = subCost;
+    if (document.getElementById("tovar4").checked) {
+        let count = Number(elements.count4.value);
+        countAll = countAll + count;
+        let subCost = count * 4;
+
+        if (elements.package4.checked) {
+            subCost += 1;
+        }
+
+        cost += subCost;
+        document.getElementById("tovar4Cost").value = subCost;
     }
-    form.ww.value = "Стоимость " + cost + " р.";
+    if (document.getElementById("tovar5").checked) {
+        let count = Number(elements.count5.value);
+        countAll = countAll + count;
+        let subCost = count * 1;
+
+        if (elements.package5.checked) {
+            subCost += 1;
+        }
+        cost += subCost;
+        document.getElementById("tovar5Cost").value = subCost;
+    }
+    console.log(cost)
+    if (elements.arrive.checked) {
+        cost += cost * 0.05;
+    }
+    if (countAll >= 30) {
+        form.discount.value = "20%"
+        cost -= cost * 0.2;
+    } else {
+        form.discount.value = "0%"
+    }
+    form.result.value = "Стоимость " + cost + " р.";
 }
