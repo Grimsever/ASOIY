@@ -1,0 +1,12 @@
+* {
+    margin: auto;
+}
+
+.form {
+    width: 100px;
+}
+
+#result {
+    text-align: center;
+    visibility: hidden;
+}
