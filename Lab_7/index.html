@@ -1,0 +1,188 @@
+<html>
+
+<head>
+    <title>Анкета</title>
+    <script language="JavaScript">
+        function test() {
+            console.log("lox");
+            const elements = document.form.elements;
+            var cost = 0;
+            if (document.getElementById("info").checked) {
+                let subCost =
+                    Number(document.getElementById("info").value) +
+                    Number(elements.infoHours.value) +
+                    Number(elements.infoLanguage.value) +
+                    Number(elements.infoTest.value);
+                cost = cost + subCost;
+                document.getElementById("infoCost").value = subCost;
+            }
+
+            if (document.getElementById("DB").checked) {
+                let subCost =
+                    Number(document.getElementById("DB").value) +
+                    Number(elements.DBHours.value) +
+                    Number(elements.DBLanguage.value) +
+                    Number(elements.DBTest.value);
+                cost = cost + subCost;
+                document.getElementById("DBCost").value = subCost;
+            }
+
+            if (document.getElementById("net").checked) {
+                let subCost =
+                    Number(document.getElementById("net").value) +
+                    Number(elements.netHours.value) +
+                    Number(elements.netLanguage.value) +
+                    Number(elements.netTest.value);
+                cost = cost + subCost;
+                document.getElementById("netCost").value = subCost;
+            }
+            if (document.getElementById("logic").checked) {
+                let subCost =
+                    Number(document.getElementById("logic").value) +
+                    Number(elements.logicHours.value) +
+                    Number(elements.logicLanguage.value) +
+                    Number(elements.logicTest.value);
+                cost = cost + subCost;
+                document.getElementById("logicCost").value = subCost;
+            }
+            form.ww.value = "Стоимость " + cost + " р.";
+        }
+    </script>
+</head>
+
+<body>
+
+    <form name="form" onsubmit="return false;">
+        <label>Введите Ваше ФИО:</label>
+        <br>
+        <input type="text" name="t" required>
+        <br>
+        <label>Введите Ваш адрес e-mail:</label>
+        <br>
+        <input type="email" name="t" required>
+        <br>
+        <label>Введите Ваш возраст:</label>
+        <br>
+        <input type="number" name="f" required>
+        <br />
+        <label>Введите Ваш адрес:</label>
+        <br />
+        <input type="text" name="p" required />
+        <br />
+        <br />
+        <table border="3" align="left">
+            <tr>
+                <td>Название курсов<br /></td>
+                <td>Продолжительность<br /></td>
+                <td>Язык<br /></td>
+                <td>Отчётность<br /></td>
+                <td>Стоимость<br /></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="lan" id="info" value="10"> Информатика
+                    <br />
+                </td>
+                <td>
+                    <fieldset>
+                        <input type="radio" name="infoHours" value="7" />36
+                        <input type="radio" name="infoHours" value="12" />64
+                        <input type="radio" name="infoHours" value="30" />128
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                        <input type="radio" name="infoLanguage" value="2" />Русский<br />
+                        <input type="radio" name="infoLanguage" value="10" />Английский<br />
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                        <input type="radio" name="infoTest" value="10" />Экзамен<br />
+                        <input type="radio" name="infoTest" value="6" />Зачёт<br />
+                    </fieldset>
+                </td>
+                <td><input type="text" id="infoCost" value="0" /></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="DB" value="35" />Базы данных<br /></td>
+                <td>
+                    <fieldset>
+                        <input type="radio" name="DBHours" value="8" />36
+                        <input type="radio" name="DBHours" value="12" />64
+                        <input type="radio" name="DBHours" value="36" />128
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                        <input type="radio" name="DBLanguage" value="2" />Русский<br />
+                        <input type="radio" name="DBLanguage" value="13" />Английский<br />
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                        <input type="radio" name="DBTest" value="20" />Экзамен<br />
+                        <input type="radio" name="DBTest" value="9" />Зачёт<br />
+                    </fieldset>
+                </td>
+                <td><input type="text" id="DBCost" value="0" /></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="net" value="20" />Сети<br /></td>
+                <td>
+                    <fieldset>
+                        <input type="radio" name="netHours" value="9" />36
+                        <input type="radio" name="netHours" value="15" />64
+                        <input type="radio" name="netHours" value="29" />128
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                        <input type="radio" name="netLanguage" value="3" />Русский<br />
+                        <input type="radio" name="netLanguage" value="13" />Английский<br />
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                        <input type="radio" name="netTest" value="16" />Экзамен<br />
+                        <input type="radio" name="netTest" value="8" />Зачёт<br />
+                    </fieldset>
+                </td>
+                <td><input type="text" id="netCost" value="0" /></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="logic" value="8" />Логика<br /></td>
+                <td>
+                    <fieldset>
+                        <input type="radio" name="logicHours" value="8" />36
+                        <input type="radio" name="logicHours" value="12" />64
+                        <input type="radio" name="logicHours" value="18" />128
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                        <input type="radio" name="logicLanguage" value="2" />Русский<br />
+                        <input type="radio" name="logicLanguage" value="9" />Английский<br />
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                        <input type="radio" name="logicTest" value="10" />Экзамен<br />
+                        <input type="radio" name="logicTest" value="5" />Зачёт<br />
+                    </fieldset>
+                </td>
+                <td><input type="text" id="logicCost" value="0" /></td>
+            </tr>
+
+            <tr>
+                <td colspan="5">
+                    <input type="submit" value="Вычислить" onclick="test(); return false;" />
+                    <input type="Text " size="50 " disabled id="ww" name="ww" value="" /><br />
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>
