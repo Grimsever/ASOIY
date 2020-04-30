@@ -1,5 +1,5 @@
 var arr = [2, 3, 4, 5, "test"];
-alert(find(arr, 23));
+alert(`Результат поиска в массиве числа 23 : ${find(arr, 23) === -1 ?"не найдено":"найдено"} `);
 
 map(incremet, [1, 3, 3]);
 
@@ -18,9 +18,14 @@ function make_random(A, B, size) {
     p.style.visibility = 'visible';
     p.sty
     var arr = new Array();
+    p.innerText += "Result";
+    p.innerHTML += "<br>"
     for (var i = 0; i <= size; i++) {
         arr.push(B * Math.random() - A * Math.random());
-        p.innerText += arr[i] + " ";
+        p.innerText += `${arr[i]} `;
+        if (i % 5 === 0 && i !== 0) {
+            p.innerHTML += "<br>"
+        }
     }
     console.log(arr.length);
 }
